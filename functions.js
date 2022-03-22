@@ -21,13 +21,16 @@
 function sumOdds(numbers) {
   // Your code here
   let oddarr = numbers.filter((num) => num % 2 === 1);
-  let sum = 0;
-  for (let i = 0; i < oddarr.length; i++) {
-    sum = sum + oddarr[i];
-  }
+  // let sum = 0;
+  // for (let i = 0; i < oddarr.length; i++) {
+  //   sum = sum + oddarr[i];
+  // }
+  let sum = oddarr.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue;
+  });
   return sum;
 }
-// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
+console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
  * characterCount(string, c):
